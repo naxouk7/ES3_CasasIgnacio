@@ -1,0 +1,23 @@
+[
+  {
+    "Nombre": "Ignacio",
+    "Edad": 22,
+    "Cupos": 5,
+    "Estado": "Aceptado",
+    "Motivo": "Ignacio cumple los requisitos y existe un cupo disponible."
+  },
+  {
+    "Nombre": "Fabian",
+    "Edad": 16,
+    "Cupos": 5,
+    "Estado": "Rechazado",
+    "Motivo": "El piloto es menor de 18 a\u00f1os."
+  },
+  {
+    "Nombre": "Gonzalo",
+    "Edad": -15,
+    "Cupos": 5,
+    "Estado": "Invalido",
+    "Motivo": "La edad y los cupos no pueden ser negativos."
+  }
+]

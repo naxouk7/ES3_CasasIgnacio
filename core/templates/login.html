@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><title>Iniciar Sesión</title></head>
+<body>
+    <h1>Acceso al Sistema</h1>
+    
+    <!-- Aquí mostraremos los mensajes de error (ej: Contraseña incorrecta) -->
+    {% if messages %}
+        <ul style="color: red;">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <label>Usuario:</label><br>
+        <input type="text" name="username" required><br><br>
+        
+        <label>Contraseña:</label><br>
+        <input type="password" name="password" required><br><br>
+        
+        <button type="submit">Entrar</button>
+    </form>
+</body>
+</html>

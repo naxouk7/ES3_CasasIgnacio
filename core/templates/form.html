@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><title>{{ accion }} Inscripción</title></head>
+<body>
+    <h1>{{ accion }} Piloto</h1>
+    
+    {% if error %}
+        <p style="color: red;"><strong>{{ error }}</strong></p>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre" value="{{ registro.nombre }}" required><br><br>
+        
+        <label>Edad:</label><br>
+        <input type="number" name="edad" value="{{ registro.edad }}" required><br><br>
+        
+        <label>Cupos disponibles en la categoría:</label><br>
+        <input type="number" name="cupos" value="{{ registro.cupos }}" required><br><br>
+        
+        <button type="submit">Guardar</button>
+        <a href="{% url 'lista' %}">Cancelar</a>
+    </form>
+</body>
+</html>

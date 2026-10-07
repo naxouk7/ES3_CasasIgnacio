@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Eliminar Inscripción</title></head>
+<body>
+    <h1>¿Eliminar a {{ registro.nombre }}?</h1>
+    <p>Esta acción ocultará el registro del sistema.</p>
+    
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Sí, eliminar</button>
+        <a href="{% url 'lista' %}">Cancelar</a>
+    </form>
+</body>
+</html>

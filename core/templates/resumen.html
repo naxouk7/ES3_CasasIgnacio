@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscripciones de Carrera</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 49px;}
+        table { border-collapse: collapse; width: 100%; margin-top: 20 px; }
+        th, td { border: 1px solid #dddddd; text-align: left; padding: 8px; }
+        th { background-color: #f2f2f2;}
+    </style>
+</head>
+<body>
+
+    <h1>Sistema de Inscripcion a Carreras</h1>
+    <p>Resumen oficial de pilotos registrados en datos.json</p>
+
+    <table>
+        <tr>
+            <th>Nombre del Piloto</th>
+            <th>Edad</th>
+            <th>Cupos</th>
+            <th>Estado</th>
+            <th>Motivo</th>
+        </tr>
+
+        {% for piloto in registros %}
+        <tr>
+            <td>{{ piloto.Nombre }}</td>
+            <td>{{ piloto.Edad }}</td>
+            <td>{{ piloto.Cupos }}</td>
+            <td>{{ piloto.Estado }}</td>
+            <td>{{ piloto.Motivo }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
